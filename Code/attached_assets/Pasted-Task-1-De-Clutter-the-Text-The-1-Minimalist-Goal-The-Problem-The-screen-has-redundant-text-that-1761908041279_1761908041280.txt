@@ -1,0 +1,52 @@
+Task 1: De-Clutter the Text (The #1 Minimalist Goal)
+The Problem: The screen has redundant text that "explains" the magic. A truly intuitive, elegant tool shows, it doesn't tell.
+
+The Change:
+
+Remove Text Under Button: Delete the small text "The AI extracts key information, generates a case number, and prepares your legal brief". The "Analyze" button implies this.
+
+Remove "HOW IT WORKS" Section: Delete the entire "HOW IT WORKS" section (steps 1, 2, 3, and 4) at the bottom. This is clutter. A pro-level tool doesn't need an on-screen manual. This single change will make the UI instantly more "elegant" and "minimalistic."
+
+Task 2: Make the Text Box "Intelligent"
+The Problem: The text box is just a dark rectangle. It feels "dead" until the user clicks the button.
+
+The Change:
+
+"Breathing" Placeholder: Make the placeholder text ("Paste your unstructured case notes...") subtly "breathe" using a pulsing opacity animation. This makes it feel "live" and "waiting."
+
+"AI Focus" Border: When the user clicks into the text box, add an animated, glowing cyan border (using your "AI Accent Color"). This is a critical piece of feedback—it tells the user "The AI is now listening."
+
+Task 3: Refine the "Analyze" Button
+The Problem: The button is a bit "bubbly" (fully rounded corners) and static.
+
+The Change:
+
+Refine the Edges: Change the button from rounded-full to rounded-xl or rounded-2xl. This is a more "premium" and "elegant" shape.
+
+Make it VIBRANT: Make the blue more electric. In Tailwind, try cyan-400 or cyan-500 for the background and a dark text (like black or slate-900) for high contrast.
+
+Add the "Glow" Effect: Give it a "glow" shadow using the same cyan color (e.g., shadow-lg shadow-cyan-500/50).
+
+Implement Interactive Feedback (CRITICAL):
+
+By default, the button must be disabled (opacity-40 cursor-not-allowed).
+
+The instant the user types or pastes any text into the text box, the button must animate to full opacity (opacity-100) and the "glow" should appear. This makes the UI feel responsive and intelligent.
+
+Task 4: Make the Logo "Reactive"
+The Problem: The logo at the top is just a static image.
+
+The Change:
+
+Subtle Animation: Make the logo subtly pulse or rotate, very slowly (e.g., a 20-second full rotation).
+
+"Thinking" State: When the user clicks "Analyze," make the logo's animation speed up (e.g., a 1-second rotation). This (along with the "Data Stream" loader I mentioned) is a much more elegant loading state than a simple spinner.
+
+Task 5: Add Fluid Page Transitions
+The Problem: When the user clicks "Analyze," the page will just "pop" to the next screen (the "Verification Dashboard").
+
+The Change:
+
+Animated Exit: When "Analyze" is clicked, use Framer Motion to make all elements on this page animate out (e.g., fade out and slide up).
+
+Animated Entry: The next screen (the "Verification Dashboard") should then animate in (e.g., fade in and slide up). This makes the entire application feel like one seamless, fluid experience.

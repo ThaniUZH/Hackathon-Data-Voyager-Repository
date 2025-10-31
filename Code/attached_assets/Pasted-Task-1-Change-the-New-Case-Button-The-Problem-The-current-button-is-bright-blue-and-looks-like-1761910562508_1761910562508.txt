@@ -1,0 +1,64 @@
+Task 1: Change the "+ New Case" Button
+The Problem: The current button is bright blue and looks like a standard "call to action."
+
+The "Perplexity" Change: The button should be 100% wide, integrated into the sidebar, and subtle.
+
+Make the + New Case button span the full width of the sidebar.
+
+Change its background to a dark, subtle color (e.g., slate-800 or gray-800), not the bright blue.
+
+Give it a very subtle, sharp border (e.g., border border-slate-700).
+
+The text + New Case and the icon should be your "AI Accent Color" (the vibrant cyan).
+
+On hover, it should not change color. It should just have a subtle background lighten (e.g., hover:bg-slate-700/50).
+
+Task 2: Redesign the "Search cases..." Bar
+The Problem: The search bar is bright white, which is visually "loud" and clashes with the dark theme.
+
+The "Perplexity" Change: The search bar should blend in, matching the new button.
+
+Change the search bar's background from white to the same dark color as the new button (e.g., slate-800).
+
+Give it the same subtle border (e.g., border border-slate-700).
+
+The placeholder text "Search cases..." should be a light gray (text-slate-400).
+
+Task 3: "De-Card-ify" the Case List (The Most Important Task)
+The Problem: Each case is its own "card" with a background and rounded edges. This is heavy.
+
+The "Perplexity" Change: Remove the cards and create a clean, border-separated list.
+
+Remove the card background from each case item. The items should just be text on the main sidebar background (slate-900 or navy).
+
+Add a Separator: Separate each case item with a single, subtle horizontal line (e.g., <hr class="border-slate-700/50" />).
+
+Hover State: Add a simple, full-width hover state to each item. When the user hovers, the background should just slightly lighten (e.g., hover:bg-slate-800/60).
+
+Task 4: Create a "Typographical Hierarchy"
+The Problem: The text on each card is a bit jumbled and all at the same "volume."
+
+The "Perplexity" Change: Use font size, weight, and color to show what's important.
+
+Case Title ("Swiss Refugee Family..."): This is the most important. Make it the only bright, primary text (e.g., text-slate-100 or text-white) and font-medium.
+
+Case ID ("UNHCR-CH-2024..."): This is secondary. Make it smaller and grayer (e.g., text-sm text-slate-400).
+
+Timestamp ("2 hours ago"): This is also secondary. Make it very small and gray (e.g., text-xs text-slate-500).
+
+Task 5: Refine the Status Tags
+The Problem: The "pills" (completed, verified, draft) are clunky.
+
+The "Perplexity" Change: Make them minimal, text-only "badges."
+
+Remove the pill background and padding.
+
+Make them just text, using color to show status.
+
+Draft: text-slate-500
+
+Verified: text-blue-400
+
+Completed: text-green-400
+
+Keep them small (text-xs) and aligned to the right.

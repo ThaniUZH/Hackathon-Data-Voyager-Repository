@@ -1,0 +1,114 @@
+Here is a comprehensive prompt designed for Relit to build the exact "Extract & Verify" AI tool we've specified.
+
+Replit Project Prompt: UNHCR "Rights-Mapper" AI Prototype
+Your Role: You are an expert full-stack developer and AI engineer. Your mission is to build a "wow factor" prototype for a 46-hour hackathon. You must be fast, strategic, and use modern AI tools to get a working, impressive demo.
+
+The Mission: Build a web application that solves the UNHCR "Virtual Legal Assistance Rights Mapping" challenge.
+
+The Core Problem: Pro bono lawyers waste hours manually sifting through fragmented, multilingual legal documents (data.zip) to determine a refugee's rights. This process is "time-consuming, inconsistent, and prone to errors".
+
+The Winning Solution (The "Extract & Verify" Workflow): We are not building a boring form or a simple chatbot. We are building an Intelligent Intake Tool that understands a lawyer's messy notes and generates a citable legal brief.
+
+The app will have a three-step workflow:
+
+1. Screen 1: The "Smart Intake" Page
+UI: A single, clean, professional-looking page with a large text area.
+
+Label: "Paste your unstructured case notes here."
+
+Action: The lawyer will paste their messy, real-world notes.
+
+Example Input (from the scenario):
+
+"Just met with a refugee family in Switzerland. The case is complex. The father previously worked in an EU member state. The mother requires urgent medical treatment, and their teenage child wants to continue school."
+
+Button: "Analyze Case Notes"
+
+2. Screen 2: The "Verification Dashboard" Page
+This is the most important interactive AI step. This is NOT a simple "thank you" page.
+
+Action: After the lawyer hits "Analyze," the page loads to show what the AI understood from the notes.
+
+AI's Job (Backend): The backend will use a powerful LLM (like Gemini 1.5 Pro or OpenAI GPT-4) for Natural Language Understanding (NLU) to perform entity extraction on the raw text.
+
+UI: The page must visually confirm the extracted data and, critically, ask for missing information.
+
+Mockup of Screen 2:
+
+Verification Dashboard
+I have analyzed your notes. Please verify the extracted information and fill in any missing details.
+
+Extracted Facts
+🌎 Host Country: Switzerland
+
+Needs: Medical, Education
+
+Complications: Prior EU Residence
+
+Missing Information
+Please clarify the following to improve the report's accuracy:
+
+1. Regarding 'Medical':
+
+What is the urgency?
+
+[ ] Urgent / Life-threatening
+
+[ ] General / Non-urgent
+
+2. Regarding 'Education':
+
+What is the education level?
+
+[ ] Primary School
+
+[ ] Secondary School (Teenager)
+
+[ ] University
+
+3. Other Common Factors (Check all that apply):
+
+[ ] Housing / Shelter Needed
+
+[ ] Family Unification
+
+[ Generate Provisional Rights Report ] (This button is the final call to action)
+
+3. Screen 3: The "Provisional Rights Report" Page
+This is the final, high-value output. It must look professional, printable, and trustworthy.
+
+Action: The backend's RAG (Retrieval-Augmented Generation) pipeline runs. It queries the data.zip vector store using the verified JSON from Screen 2.
+
+UI: A structured report, organized by need.
+
+Crucial Structure (for each need, e.g., Medical):
+
+AI-Generated Summary: A 1-2 sentence, easy-to-understand summary of the refugee's rights.
+
+AI-Powered Translation: The key legal article(s) translated into the lawyer's language (e.g., English).
+
+Direct Citation (The "Trust" Signal): The original, verifiable quote from the source document, with a clear reference (e.g., Source: Swiss Asylum Act of 2019, p. 45, Sec. 2.1).
+
+Recommended Tech Stack (for 46-hour sprint)
+Frontend: React/Vite + Tailwind CSS (for a fast, beautiful, modern UI). Use a tool like Vercel's AI Chat/Component templates to get a shell quickly.
+
+Backend: Python (FastAPI). It's perfect for serving AI models.
+
+Vector Database: ChromaDB or FAISS. It's in-memory/file-based and perfect for a hackathon. We will pre-process the data.zip (Swiss/EU docs only).
+
+AI APIs (The "Engine"):
+
+NLU (Screen 2): Gemini 1.5 Pro API or OpenAI GPT-4 API. Use it for the POST /analyze_notes endpoint. The prompt must be engineered to return clean JSON.
+
+RAG (Screen 3): Gemini 1.5 Pro API or OpenAI GPT-4 API. Use it for the POST /generate_report endpoint. The prompt must be strictly instructed to "answer only using the provided legal texts" and to "provide the original quote for citation."
+
+Immediate Task List (Hackathon Plan)
+Task 1 (Backend - Data): Start this immediately. Take the data.zip PDFs (Swiss/EU only), extract the text (using PyPDF2), chunk it, and embed it into a ChromaDB vector store. Save this store. This is our "legal brain."
+
+Task 2 (Backend - AI): Build the POST /analyze_notes endpoint. Engineer the prompt for the Gemini API that takes raw text and reliably returns JSON (e.g., {"country": "Switzerland", "needs": ["Medical", "Education"]...}).
+
+Task 3 (Backend - AI): Build the POST /generate_report RAG endpoint. This will take the verified JSON, run multiple queries against the ChromaDB, and use the Gemini API to synthesize the final report.
+
+Task 4 (Frontend - UI): Build the 3 screens in React. Screen 2 (Verification) and Screen 3 (Report) are the most important. They must look professional and build trust.
+
+Task 5 (Integration): Connect the React frontend to the FastAPI backend.

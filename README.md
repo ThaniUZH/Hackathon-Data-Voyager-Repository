@@ -25,8 +25,14 @@ These issues cause delays, inconsistencies, and sometimes inaccurate guidance, w
 UNHCR Rights-Mapper is an AI-powered legal assistance tool for pro bono lawyers working with refugee cases. It automates the analysis of unstructured case notes, extracts key information, and generates comprehensive, cited legal reports. The application features a modern chat-based interface that tracks each case as a conversation, aiming for professional clarity and trust. Its core purpose is to eliminate the manual, time-consuming process of sifting through fragmented, multilingual legal documents to determine refugee rights, transforming messy case notes into verified legal briefs.
 ### Core Workflow
 - **Smart Intake**: A clean interface for unstructured notes and file attachments. AI analyzes notes to extract entities (host country, needs, complications).
+  ![Landing Page](Images/Demo1.png)
 - **Verification Dashboard**: Displays AI-extracted information for lawyer review and allows optional data entry for additional details.
+   ![Verification Dashboard](Images/Demo2.png)
+
 - **Legal Report**: Generates a comprehensive legal brief analyzing all 11 refugee rights categories.For each applicable right, the system searches identifies relevant laws and precedents and generates detailed sections including AI Summary, Legal Basis with citations, Legal Complications, Potential Risks, and Similar Cases from web research. Applicable rights are highlighted and expandable, while non-applicable rights are grayed out. Each section includes confidence scoring and copy to clipboard functionality.
+  ![Legal Report Page](Images/Demo3.png)
+  ![Legal Report Page](Images/Demo4.png)
+
 
 ## **Tech Stack**
 

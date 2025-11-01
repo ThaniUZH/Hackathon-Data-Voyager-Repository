@@ -21,10 +21,24 @@ Refugee lawyers currently face major obstacles:
 
 These issues cause delays, inconsistencies, and sometimes inaccurate guidance, which can result in lost rights or violations for refugees.
 
+## **Our Solution**
+UNHCR Rights-Mapper is an AI-powered legal assistance tool for pro bono lawyers working with refugee cases. It automates the analysis of unstructured case notes, extracts key information, and generates comprehensive, cited legal reports. The application features a modern chat-based interface that tracks each case as a conversation, aiming for professional clarity and trust. Its core purpose is to eliminate the manual, time-consuming process of sifting through fragmented, multilingual legal documents to determine refugee rights, transforming messy case notes into verified legal briefs.
+### Core Workflow
+- **Smart Intake**: A clean interface for unstructured notes and file attachments. AI analyzes notes to extract entities (host country, needs, complications).
+- **Verification Dashboard**: Displays AI-extracted information for lawyer review and allows optional data entry for additional details.
+- **Legal Report**: Generates a comprehensive legal brief analyzing all 11 refugee rights categories.For each applicable right, the system searches identifies relevant laws and precedents and generates detailed sections including AI Summary, Legal Basis with citations, Legal Complications, Potential Risks, and Similar Cases from web research. Applicable rights are highlighted and expandable, while non-applicable rights are grayed out. Each section includes confidence scoring and copy to clipboard functionality.
 
-4. Explain your solution (you can use screenshots and demo)
-5. Specify tech stack
+## **Tech Stack**
 
-Before the pitch session put your presentation in the `pitch/` folder.
+### Frontend
+- **Framework:** React 18 + TypeScript + Vite  
+- **UI Library:** shadcn/ui (Radix UI + Tailwind CSS)  
+- **State Management:** TanStack Query (server state), React Context (global UI), React hooks (local state)  
+- **Routing:** Wouter  
+- **Design Flow:** Three-page workflow (Intake → Verification → Report)
 
-Happy hacking!
+### Backend
+- **Framework:** Express.js + TypeScript  
+- **API:** RESTful endpoints under `/api`  
+
+
